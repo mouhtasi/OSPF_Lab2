@@ -1,0 +1,183 @@
+autostart = False
+version = 0.8.3.1
+[127.0.0.1:7202]
+    workingdir = C:\Users\nano\AppData\Local\Temp
+    udp = 10200
+    [[3640]]
+        image = C:\Users\nano\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
+        idlepc = 0x60668230
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R9]]
+        model = 3640
+        console = 2009
+        aux = 2509
+        slot0 = NM-4T
+        s0/0 = R5 s0/2
+        slot1 = NM-1FE-TX
+        f1/0 = SW5 1
+        cnfg = configs\R9.cfg
+        x = 271.0
+        y = 83.0
+        z = 1.0
+    [[ETHSW SW5]]
+        1 = access 1 R9 f1/0
+        x = 269.5
+        y = 184.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\nano\AppData\Local\Temp
+    udp = 10000
+    [[3640]]
+        image = C:\Users\nano\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
+        idlepc = 0x60668230
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R4]]
+        model = 3640
+        console = 2004
+        aux = 2504
+        slot0 = NM-4T
+        s0/0 = R1 s0/2
+        s0/1 = R6 s0/0
+        s0/2 = R7 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 3
+        cnfg = configs\R4.cfg
+        x = -339.0
+        y = -74.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3640
+        console = 2001
+        aux = 2501
+        slot0 = NM-4T
+        s0/0 = R2 s0/0
+        s0/1 = R3 s0/0
+        s0/2 = R4 s0/0
+        s0/3 = R5 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 1
+        cnfg = configs\R1.cfg
+        x = -108.0
+        y = -210.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3640
+        console = 2002
+        aux = 2502
+        slot0 = NM-4T
+        s0/0 = R1 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW6 1
+        cnfg = configs\R2.cfg
+        x = -270.0
+        y = -275.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3640
+        console = 2003
+        aux = 2503
+        slot0 = NM-4T
+        s0/0 = R1 s0/1
+        slot1 = NM-1FE-TX
+        f1/0 = SW7 1
+        cnfg = configs\R3.cfg
+        x = 39.0
+        y = -275.0
+        z = 1.0
+    [[ETHSW SW1]]
+        1 = access 1 R1 f1/0
+        2 = access 1 R5 f1/0
+        3 = access 1 R4 f1/0
+        x = -114.5
+        y = -74.0
+        z = 1.0
+    [[ETHSW SW7]]
+        1 = access 1 R3 f1/0
+        x = 101.5
+        y = -193.0
+        z = 1.0
+    [[ETHSW SW6]]
+        1 = access 1 R2 f1/0
+        x = -308.5
+        y = -193.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\nano\AppData\Local\Temp
+    udp = 10100
+    [[3640]]
+        image = C:\Users\nano\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
+        idlepc = 0x60668230
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R5]]
+        model = 3640
+        console = 2005
+        aux = 2505
+        slot0 = NM-4T
+        s0/0 = R1 s0/3
+        s0/1 = R8 s0/0
+        s0/2 = R9 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 2
+        cnfg = configs\R5.cfg
+        x = 122.0
+        y = -74.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3640
+        console = 2006
+        aux = 2506
+        slot0 = NM-4T
+        s0/0 = R4 s0/1
+        slot1 = NM-1FE-TX
+        f1/0 = SW2 1
+        cnfg = configs\R6.cfg
+        x = -475.0
+        y = 83.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3640
+        console = 2007
+        aux = 2507
+        slot0 = NM-4T
+        s0/0 = R4 s0/2
+        slot1 = NM-1FE-TX
+        f1/0 = SW3 1
+        cnfg = configs\R7.cfg
+        x = -300.0
+        y = 83.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3640
+        console = 2008
+        aux = 2508
+        slot0 = NM-4T
+        s0/0 = R5 s0/1
+        slot1 = NM-1FE-TX
+        f1/0 = SW4 1
+        cnfg = configs\R8.cfg
+        x = 58.0
+        y = 83.0
+        z = 1.0
+    [[ETHSW SW3]]
+        1 = access 1 R7 f1/0
+        x = -304.5
+        y = 187.0
+        z = 1.0
+    [[ETHSW SW2]]
+        1 = access 1 R6 f1/0
+        x = -479.5
+        y = 187.0
+        z = 1.0
+    [[ETHSW SW4]]
+        1 = access 1 R8 f1/0
+        x = 54.5
+        y = 184.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
