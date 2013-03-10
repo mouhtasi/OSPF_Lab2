@@ -13,6 +13,7 @@ version = 0.8.3.1
         model = 3640
         console = 2009
         aux = 2509
+        cnfg = configs\R4.cfg
         slot0 = NM-4T
         s0/0 = FRS3 s0/2
         slot1 = NM-1FE-TX
@@ -34,22 +35,11 @@ version = 0.8.3.1
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R8]]
-        model = 3640
-        console = 2002
-        aux = 2502
-        slot0 = NM-4T
-        s0/0 = FRS1 s0/0
-        slot1 = NM-1FE-TX
-        f1/0 = SW6 1
-        cnfg = configs\R8.cfg
-        x = -270.0
-        y = -275.0
-        z = 1.0
     [[ROUTER FRS1]]
         model = 3640
         console = 2001
         aux = 2501
+        cnfg = configs\FRS1.cfg
         slot0 = NM-4T
         s0/0 = R8 s0/0
         s0/1 = R9 s0/0
@@ -57,19 +47,30 @@ version = 0.8.3.1
         s0/3 = FRS3 s0/0
         slot1 = NM-1FE-TX
         f1/0 = SW1 1
-        cnfg = configs\FRS1.cfg
         x = -108.0
         y = -210.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3640
+        console = 2002
+        aux = 2502
+        cnfg = configs\R8.cfg
+        slot0 = NM-4T
+        s0/0 = FRS1 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW6 1
+        x = -270.0
+        y = -275.0
         z = 1.0
     [[ROUTER R9]]
         model = 3640
         console = 2003
         aux = 2503
+        cnfg = configs\R9.cfg
         slot0 = NM-4T
         s0/0 = FRS1 s0/1
         slot1 = NM-1FE-TX
         f1/0 = SW7 1
-        cnfg = configs\R9.cfg
         x = 39.0
         y = -275.0
         z = 1.0
@@ -77,6 +78,7 @@ version = 0.8.3.1
         model = 3640
         console = 2004
         aux = 2504
+        cnfg = configs\FRS2.cfg
         slot0 = NM-4T
         s0/0 = FRS1 s0/2
         s0/1 = R1 s0/0
@@ -100,8 +102,8 @@ version = 0.8.3.1
         z = 1.0
     [[ETHSW SW6]]
         1 = access 1 R8 f1/0
-        x = -308.5
-        y = -193.0
+        x = -337.5
+        y = -176.0
         z = 1.0
 [127.0.0.1:7201]
     workingdir = C:\Users\nano\AppData\Local\Temp
@@ -116,6 +118,7 @@ version = 0.8.3.1
         model = 3640
         console = 2006
         aux = 2506
+        cnfg = configs\R1.cfg
         slot0 = NM-4T
         s0/0 = FRS2 s0/1
         slot1 = NM-1FE-TX
@@ -127,6 +130,7 @@ version = 0.8.3.1
         model = 3640
         console = 2007
         aux = 2507
+        cnfg = configs\R2.cfg
         slot0 = NM-4T
         s0/0 = FRS2 s0/2
         slot1 = NM-1FE-TX
@@ -138,6 +142,7 @@ version = 0.8.3.1
         model = 3640
         console = 2008
         aux = 2508
+        cnfg = configs\R3.cfg
         slot0 = NM-4T
         s0/0 = FRS3 s0/1
         slot1 = NM-1FE-TX
@@ -149,6 +154,7 @@ version = 0.8.3.1
         model = 3640
         console = 2005
         aux = 2505
+        cnfg = configs\FRS3.cfg
         slot0 = NM-4T
         s0/0 = FRS1 s0/3
         s0/1 = R3 s0/0
@@ -246,35 +252,35 @@ version = 0.8.3.1
         y = 42.3040311046
         interface = R9 s0/0
     [[NOTE 15]]
-        text = "f1/0"
-        x = 31.7698129685
-        y = 61.9810785231
-        interface = FRS1 f1/0
-    [[NOTE 16]]
-        text = "s0/3"
-        x = 68.831759541
-        y = 39.7787797162
-        interface = FRS1 s0/3
-    [[NOTE 17]]
-        text = "s0/2"
-        x = 0.106826765164
-        y = 44.7604735132
-        interface = FRS1 s0/2
-    [[NOTE 18]]
-        text = "s0/1"
-        x = 67.4636956942
-        y = 1.69596889539
-        interface = FRS1 s0/1
-    [[NOTE 19]]
-        text = "s0/0"
-        x = -5.51183238129
-        y = 11.190801758
-        interface = FRS1 s0/0
-    [[NOTE 20]]
         text = "s0/0"
         x = 71.5118323813
         y = 32.809198242
         interface = R8 s0/0
+    [[NOTE 16]]
+        text = "f1/0"
+        x = 31.7698129685
+        y = 61.9810785231
+        interface = FRS1 f1/0
+    [[NOTE 17]]
+        text = "s0/3"
+        x = 68.831759541
+        y = 39.7787797162
+        interface = FRS1 s0/3
+    [[NOTE 18]]
+        text = "s0/2"
+        x = 0.106826765164
+        y = 44.7604735132
+        interface = FRS1 s0/2
+    [[NOTE 19]]
+        text = "s0/1"
+        x = 67.4636956942
+        y = 1.69596889539
+        interface = FRS1 s0/1
+    [[NOTE 20]]
+        text = "s0/0"
+        x = -5.51183238129
+        y = 11.190801758
+        interface = FRS1 s0/0
     [[NOTE 21]]
         text = "s0/0"
         x = 43.9129735518
