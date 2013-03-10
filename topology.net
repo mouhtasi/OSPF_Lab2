@@ -9,20 +9,19 @@ version = 0.8.3.1
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R9]]
+    [[ROUTER R4]]
         model = 3640
         console = 2009
         aux = 2509
         slot0 = NM-4T
-        s0/0 = R5 s0/2
+        s0/0 = FRS3 s0/2
         slot1 = NM-1FE-TX
         f1/0 = SW5 1
-        cnfg = configs\R9.cfg
         x = 271.0
         y = 83.0
         z = 1.0
     [[ETHSW SW5]]
-        1 = access 1 R9 f1/0
+        1 = access 1 R4 f1/0
         x = 269.5
         y = 184.0
         z = 1.0
@@ -35,73 +34,72 @@ version = 0.8.3.1
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R4]]
-        model = 3640
-        console = 2004
-        aux = 2504
-        slot0 = NM-4T
-        s0/0 = R1 s0/2
-        s0/1 = R6 s0/0
-        s0/2 = R7 s0/0
-        slot1 = NM-1FE-TX
-        f1/0 = SW1 3
-        cnfg = configs\R4.cfg
-        x = -339.0
-        y = -74.0
-        z = 1.0
-    [[ROUTER R1]]
-        model = 3640
-        console = 2001
-        aux = 2501
-        slot0 = NM-4T
-        s0/0 = R2 s0/0
-        s0/1 = R3 s0/0
-        s0/2 = R4 s0/0
-        s0/3 = R5 s0/0
-        slot1 = NM-1FE-TX
-        f1/0 = SW1 1
-        cnfg = configs\R1.cfg
-        x = -108.0
-        y = -210.0
-        z = 1.0
-    [[ROUTER R2]]
+    [[ROUTER R8]]
         model = 3640
         console = 2002
         aux = 2502
         slot0 = NM-4T
-        s0/0 = R1 s0/0
+        s0/0 = FRS1 s0/0
         slot1 = NM-1FE-TX
         f1/0 = SW6 1
-        cnfg = configs\R2.cfg
+        cnfg = configs\R8.cfg
         x = -270.0
         y = -275.0
         z = 1.0
-    [[ROUTER R3]]
+    [[ROUTER FRS1]]
+        model = 3640
+        console = 2001
+        aux = 2501
+        slot0 = NM-4T
+        s0/0 = R8 s0/0
+        s0/1 = R9 s0/0
+        s0/2 = FRS2 s0/0
+        s0/3 = FRS3 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 1
+        cnfg = configs\FRS1.cfg
+        x = -108.0
+        y = -210.0
+        z = 1.0
+    [[ROUTER R9]]
         model = 3640
         console = 2003
         aux = 2503
         slot0 = NM-4T
-        s0/0 = R1 s0/1
+        s0/0 = FRS1 s0/1
         slot1 = NM-1FE-TX
         f1/0 = SW7 1
-        cnfg = configs\R3.cfg
+        cnfg = configs\R9.cfg
         x = 39.0
         y = -275.0
         z = 1.0
+    [[ROUTER FRS2]]
+        model = 3640
+        console = 2004
+        aux = 2504
+        slot0 = NM-4T
+        s0/0 = FRS1 s0/2
+        s0/1 = R1 s0/0
+        s0/2 = R2 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 3
+        x = -339.0
+        y = -74.0
+        z = 1.0
     [[ETHSW SW1]]
-        1 = access 1 R1 f1/0
-        2 = access 1 R5 f1/0
-        3 = access 1 R4 f1/0
+        1 = access 1 FRS1 f1/0
+        2 = access 1 FRS3 f1/0
+        3 = access 1 FRS2 f1/0
         x = -114.5
         y = -74.0
         z = 1.0
     [[ETHSW SW7]]
-        1 = access 1 R3 f1/0
+        1 = access 1 R9 f1/0
         x = 101.5
         y = -193.0
         z = 1.0
     [[ETHSW SW6]]
-        1 = access 1 R2 f1/0
+        1 = access 1 R8 f1/0
         x = -308.5
         y = -193.0
         z = 1.0
@@ -114,70 +112,186 @@ version = 0.8.3.1
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R5]]
-        model = 3640
-        console = 2005
-        aux = 2505
-        slot0 = NM-4T
-        s0/0 = R1 s0/3
-        s0/1 = R8 s0/0
-        s0/2 = R9 s0/0
-        slot1 = NM-1FE-TX
-        f1/0 = SW1 2
-        cnfg = configs\R5.cfg
-        x = 122.0
-        y = -74.0
-        z = 1.0
-    [[ROUTER R6]]
+    [[ROUTER R1]]
         model = 3640
         console = 2006
         aux = 2506
         slot0 = NM-4T
-        s0/0 = R4 s0/1
+        s0/0 = FRS2 s0/1
         slot1 = NM-1FE-TX
         f1/0 = SW2 1
-        cnfg = configs\R6.cfg
         x = -475.0
         y = 83.0
         z = 1.0
-    [[ROUTER R7]]
+    [[ROUTER R2]]
         model = 3640
         console = 2007
         aux = 2507
         slot0 = NM-4T
-        s0/0 = R4 s0/2
+        s0/0 = FRS2 s0/2
         slot1 = NM-1FE-TX
         f1/0 = SW3 1
-        cnfg = configs\R7.cfg
         x = -300.0
         y = 83.0
         z = 1.0
-    [[ROUTER R8]]
+    [[ROUTER R3]]
         model = 3640
         console = 2008
         aux = 2508
         slot0 = NM-4T
-        s0/0 = R5 s0/1
+        s0/0 = FRS3 s0/1
         slot1 = NM-1FE-TX
         f1/0 = SW4 1
-        cnfg = configs\R8.cfg
         x = 58.0
         y = 83.0
         z = 1.0
+    [[ROUTER FRS3]]
+        model = 3640
+        console = 2005
+        aux = 2505
+        slot0 = NM-4T
+        s0/0 = FRS1 s0/3
+        s0/1 = R3 s0/0
+        s0/2 = R4 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 2
+        x = 122.0
+        y = -74.0
+        z = 1.0
     [[ETHSW SW3]]
-        1 = access 1 R7 f1/0
+        1 = access 1 R2 f1/0
         x = -304.5
         y = 187.0
         z = 1.0
     [[ETHSW SW2]]
-        1 = access 1 R6 f1/0
+        1 = access 1 R1 f1/0
         x = -479.5
         y = 187.0
         z = 1.0
     [[ETHSW SW4]]
-        1 = access 1 R8 f1/0
+        1 = access 1 R3 f1/0
         x = 54.5
         y = 184.0
         z = 1.0
 [GNS3-DATA]
     configs = configs
+    [[NOTE 1]]
+        text = "1"
+        x = 9.50129990251
+        y = -14.398480114
+        interface = SW7 1
+    [[NOTE 2]]
+        text = "3"
+        x = -4.48603460272
+        y = 17.056899593
+        interface = SW1 3
+    [[NOTE 3]]
+        text = "2"
+        x = 75.4868572364
+        y = 17.0253040317
+        interface = SW1 2
+    [[NOTE 4]]
+        text = "1"
+        x = 36.7301870315
+        y = -23.9810785231
+        interface = SW1 1
+    [[NOTE 5]]
+        text = "f1/0"
+        x = 72.9860346027
+        y = 20.943100407
+        interface = FRS2 f1/0
+    [[NOTE 6]]
+        text = "s0/0"
+        x = 65.8931732348
+        y = -0.760473513155
+        interface = FRS2 s0/0
+    [[NOTE 7]]
+        text = "s0/2"
+        x = 47.0495225697
+        y = 59.4514474428
+        interface = FRS2 s0/2
+    [[NOTE 8]]
+        text = "s0/1"
+        x = 9.71146566189
+        y = 54.5214416713
+        interface = FRS2 s0/1
+    [[NOTE 9]]
+        text = "f1/0"
+        x = -6.98685723638
+        y = 20.9746959683
+        interface = FRS3 f1/0
+    [[NOTE 10]]
+        text = "s0/0"
+        x = -2.83175954098
+        y = 4.22122028379
+        interface = FRS3 s0/0
+    [[NOTE 11]]
+        text = "s0/1"
+        x = 22.0870264482
+        y = 60.4825545963
+        interface = FRS3 s0/1
+    [[NOTE 12]]
+        text = "s0/2"
+        x = 63.0058271815
+        y = 48.4509042407
+        interface = FRS3 s0/2
+    [[NOTE 13]]
+        text = "f1/0"
+        x = 58.9987000975
+        y = 52.398480114
+        interface = R9 f1/0
+    [[NOTE 14]]
+        text = "s0/0"
+        x = -1.46369569421
+        y = 42.3040311046
+        interface = R9 s0/0
+    [[NOTE 15]]
+        text = "f1/0"
+        x = 31.7698129685
+        y = 61.9810785231
+        interface = FRS1 f1/0
+    [[NOTE 16]]
+        text = "s0/3"
+        x = 68.831759541
+        y = 39.7787797162
+        interface = FRS1 s0/3
+    [[NOTE 17]]
+        text = "s0/2"
+        x = 0.106826765164
+        y = 44.7604735132
+        interface = FRS1 s0/2
+    [[NOTE 18]]
+        text = "s0/1"
+        x = 67.4636956942
+        y = 1.69596889539
+        interface = FRS1 s0/1
+    [[NOTE 19]]
+        text = "s0/0"
+        x = -5.51183238129
+        y = 11.190801758
+        interface = FRS1 s0/0
+    [[NOTE 20]]
+        text = "s0/0"
+        x = 71.5118323813
+        y = 32.809198242
+        interface = R8 s0/0
+    [[NOTE 21]]
+        text = "s0/0"
+        x = 43.9129735518
+        y = -16.4825545963
+        interface = R3 s0/0
+    [[NOTE 22]]
+        text = "s0/0"
+        x = 18.9504774303
+        y = -15.4514474428
+        interface = R2 s0/0
+    [[NOTE 23]]
+        text = "s0/0"
+        x = 56.2885343381
+        y = -10.5214416713
+        interface = R1 s0/0
+    [[NOTE 24]]
+        text = "s0/0"
+        x = 2.99417281849
+        y = -4.45090424075
+        interface = R4 s0/0
