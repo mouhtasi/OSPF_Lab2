@@ -1,10 +1,10 @@
 autostart = False
 version = 0.8.3.1
 [127.0.0.1:7202]
-    workingdir = C:\Users\nano\AppData\Local\Temp
+    workingdir = C:\Users\Imad\AppData\Local\Temp
     udp = 10200
     [[3640]]
-        image = C:\Users\nano\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
+        image = C:\Users\Imad\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
         idlepc = 0x60668230
         sparsemem = True
         ghostios = True
@@ -27,17 +27,29 @@ version = 0.8.3.1
         y = 184.0
         z = 1.0
 [127.0.0.1:7200]
-    workingdir = C:\Users\nano\AppData\Local\Temp
+    workingdir = C:\Users\Imad\AppData\Local\Temp
     udp = 10000
     [[3640]]
-        image = C:\Users\nano\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
+        image = C:\Users\Imad\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
         idlepc = 0x60668230
         sparsemem = True
         ghostios = True
         chassis = 3640
+    [[ROUTER R8]]
+        model = 3640
+        console = 2022
+        aux = 2502
+        cnfg = configs\R8.cfg
+        slot0 = NM-4T
+        s0/0 = FRS1 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW6 1
+        x = -270.0
+        y = -275.0
+        z = 1.0
     [[ROUTER FRS1]]
         model = 3640
-        console = 2001
+        console = 2021
         aux = 2501
         cnfg = configs\FRS1.cfg
         slot0 = NM-4T
@@ -50,21 +62,9 @@ version = 0.8.3.1
         x = -108.0
         y = -210.0
         z = 1.0
-    [[ROUTER R8]]
-        model = 3640
-        console = 2002
-        aux = 2502
-        cnfg = configs\R8.cfg
-        slot0 = NM-4T
-        s0/0 = FRS1 s0/0
-        slot1 = NM-1FE-TX
-        f1/0 = SW6 1
-        x = -270.0
-        y = -275.0
-        z = 1.0
     [[ROUTER R9]]
         model = 3640
-        console = 2003
+        console = 203
         aux = 2503
         cnfg = configs\R9.cfg
         slot0 = NM-4T
@@ -76,7 +76,7 @@ version = 0.8.3.1
         z = 1.0
     [[ROUTER FRS2]]
         model = 3640
-        console = 2004
+        console = 2024
         aux = 2504
         cnfg = configs\FRS2.cfg
         slot0 = NM-4T
@@ -106,17 +106,17 @@ version = 0.8.3.1
         y = -176.0
         z = 1.0
 [127.0.0.1:7201]
-    workingdir = C:\Users\nano\AppData\Local\Temp
+    workingdir = C:\Users\Imad\AppData\Local\Temp
     udp = 10100
     [[3640]]
-        image = C:\Users\nano\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
+        image = C:\Users\Imad\Dropbox\GNS3\Images\c3640-is-mz.124-17.image
         idlepc = 0x60668230
         sparsemem = True
         ghostios = True
         chassis = 3640
     [[ROUTER R1]]
         model = 3640
-        console = 2006
+        console = 2026
         aux = 2506
         cnfg = configs\R1.cfg
         slot0 = NM-4T
@@ -128,7 +128,7 @@ version = 0.8.3.1
         z = 1.0
     [[ROUTER R2]]
         model = 3640
-        console = 2007
+        console = 2027
         aux = 2507
         cnfg = configs\R2.cfg
         slot0 = NM-4T
@@ -140,7 +140,7 @@ version = 0.8.3.1
         z = 1.0
     [[ROUTER R3]]
         model = 3640
-        console = 2008
+        console = 2028
         aux = 2508
         cnfg = configs\R3.cfg
         slot0 = NM-4T
@@ -152,7 +152,7 @@ version = 0.8.3.1
         z = 1.0
     [[ROUTER FRS3]]
         model = 3640
-        console = 2005
+        console = 2025
         aux = 2505
         cnfg = configs\FRS3.cfg
         slot0 = NM-4T
@@ -252,35 +252,35 @@ version = 0.8.3.1
         y = 42.3040311046
         interface = R9 s0/0
     [[NOTE 15]]
-        text = "s0/0"
-        x = 71.5118323813
-        y = 32.809198242
-        interface = R8 s0/0
-    [[NOTE 16]]
         text = "f1/0"
         x = 31.7698129685
         y = 61.9810785231
         interface = FRS1 f1/0
-    [[NOTE 17]]
+    [[NOTE 16]]
         text = "s0/3"
         x = 68.831759541
         y = 39.7787797162
         interface = FRS1 s0/3
-    [[NOTE 18]]
+    [[NOTE 17]]
         text = "s0/2"
         x = 0.106826765164
         y = 44.7604735132
         interface = FRS1 s0/2
-    [[NOTE 19]]
+    [[NOTE 18]]
         text = "s0/1"
         x = 67.4636956942
         y = 1.69596889539
         interface = FRS1 s0/1
-    [[NOTE 20]]
+    [[NOTE 19]]
         text = "s0/0"
         x = -5.51183238129
         y = 11.190801758
         interface = FRS1 s0/0
+    [[NOTE 20]]
+        text = "s0/0"
+        x = 71.5118323813
+        y = 32.809198242
+        interface = R8 s0/0
     [[NOTE 21]]
         text = "s0/0"
         x = 43.9129735518
