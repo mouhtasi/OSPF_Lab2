@@ -24,7 +24,7 @@ version = 0.8.3.1
     [[ETHSW SW5]]
         1 = access 1 R4 f1/0
         x = 269.5
-        y = 184.0
+        y = 210.0
         z = 1.0
 [127.0.0.1:7200]
     workingdir = C:\Users\Imad\AppData\Local\Temp
@@ -35,18 +35,6 @@ version = 0.8.3.1
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R8]]
-        model = 3640
-        console = 2022
-        aux = 2502
-        cnfg = configs\R8.cfg
-        slot0 = NM-4T
-        s0/0 = FRS1 s0/0
-        slot1 = NM-1FE-TX
-        f1/0 = SW6 1
-        x = -270.0
-        y = -275.0
-        z = 1.0
     [[ROUTER FRS1]]
         model = 3640
         console = 2021
@@ -61,6 +49,18 @@ version = 0.8.3.1
         f1/0 = SW1 1
         x = -108.0
         y = -210.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3640
+        console = 2022
+        aux = 2502
+        cnfg = configs\R8.cfg
+        slot0 = NM-4T
+        s0/0 = FRS1 s0/0
+        slot1 = NM-1FE-TX
+        f1/0 = SW6 1
+        x = -270.0
+        y = -275.0
         z = 1.0
     [[ROUTER R9]]
         model = 3640
@@ -166,21 +166,23 @@ version = 0.8.3.1
         z = 1.0
     [[ETHSW SW3]]
         1 = access 1 R2 f1/0
-        x = -304.5
-        y = 187.0
+        x = -300.5
+        y = 223.0
         z = 1.0
     [[ETHSW SW2]]
         1 = access 1 R1 f1/0
-        x = -479.5
-        y = 187.0
+        x = -475.5
+        y = 223.0
         z = 1.0
     [[ETHSW SW4]]
         1 = access 1 R3 f1/0
-        x = 54.5
-        y = 184.0
+        x = 56.5
+        y = 214.0
         z = 1.0
 [GNS3-DATA]
     configs = configs
+    m11 = 1.0
+    m22 = 1.0
     [[NOTE 1]]
         text = "1"
         x = 9.50129990251
@@ -252,35 +254,35 @@ version = 0.8.3.1
         y = 42.3040311046
         interface = R9 s0/0
     [[NOTE 15]]
-        text = "f1/0"
-        x = 31.7698129685
-        y = 61.9810785231
-        interface = FRS1 f1/0
-    [[NOTE 16]]
-        text = "s0/3"
-        x = 68.831759541
-        y = 39.7787797162
-        interface = FRS1 s0/3
-    [[NOTE 17]]
-        text = "s0/2"
-        x = 0.106826765164
-        y = 44.7604735132
-        interface = FRS1 s0/2
-    [[NOTE 18]]
-        text = "s0/1"
-        x = 67.4636956942
-        y = 1.69596889539
-        interface = FRS1 s0/1
-    [[NOTE 19]]
-        text = "s0/0"
-        x = -5.51183238129
-        y = 11.190801758
-        interface = FRS1 s0/0
-    [[NOTE 20]]
         text = "s0/0"
         x = 71.5118323813
         y = 32.809198242
         interface = R8 s0/0
+    [[NOTE 16]]
+        text = "f1/0"
+        x = 31.7698129685
+        y = 61.9810785231
+        interface = FRS1 f1/0
+    [[NOTE 17]]
+        text = "s0/3"
+        x = 68.831759541
+        y = 39.7787797162
+        interface = FRS1 s0/3
+    [[NOTE 18]]
+        text = "s0/2"
+        x = 0.106826765164
+        y = 44.7604735132
+        interface = FRS1 s0/2
+    [[NOTE 19]]
+        text = "s0/1"
+        x = 67.4636956942
+        y = 1.69596889539
+        interface = FRS1 s0/1
+    [[NOTE 20]]
+        text = "s0/0"
+        x = -5.51183238129
+        y = 11.190801758
+        interface = FRS1 s0/0
     [[NOTE 21]]
         text = "s0/0"
         x = 43.9129735518
